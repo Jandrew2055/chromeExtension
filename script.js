@@ -72,3 +72,28 @@ prevNextIcon.forEach((icon) => {
     renderCalendar();
   });
 });
+
+const apiKey = '5d135eeed8ef4789bca90723db711ea6';
+const selectedCity = 'New York';
+
+const response = fetch(
+  `https://api.weatherbit.io/v2.0/current?city=${selectedCity}&key=${apiKey}`
+)
+  .then((response) => response.json())
+  .then((data) => {
+    const weather = document.getElementById('weatherData'); //grabs current p tag element
+    const node = document.createTextNode(
+      `New York City | Temperature: ${celsiusToFahrenheit(
+        data.data[0]['temp']
+      )}°` //creates the text for the p tag element
+    );
+    weather.appendChild(node); //appends the temperature to the p tag element created
+    // let footerDiv = document.getElementById('footer'); // grabs the footer div
+    // footerDiv.appendChild(weather); //appends our weather data to the footer
+
+    console.log(celsiusToFahrenheit(data.data[0]['temp']));
+  });
+
+function celsiusToFahrenheit(arg) {
+  return arg * (9 / 5) + 32;
+}

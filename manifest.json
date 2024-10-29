@@ -1,19 +1,18 @@
 {
-    "manifest_version": 3,
-    "name": "One Calendar",
-    "description": "Adds user's calendars as an extension providing easy access",
-    "version": "1.0",
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": "./assets/calendarDrawing.png"
-    },
-    "icons": {
-      "16": "./assets/calendarDrawing.png",
-      "32": "./assets/calendarDrawing.png",
-      "48": "./assets/calendarDrawing.png",
-      "128": "./assets/calendarDrawing.png"
-    },
-    "author": "Nisha & Jose",
-    "permissions": ["storage", "webNavigation", "tabs"]
-  }
-  
+  "manifest_version": 3,
+  "name": "One Calendar Test",
+  "description": "Adds user's calendars as an extension providing easy access",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "./assets/calendarDrawing.png"
+  },
+  "icons": {
+    "16": "./assets/calendarDrawing.png",
+    "32": "./assets/calendarDrawing.png",
+    "48": "./assets/calendarDrawing.png",
+    "128": "./assets/calendarDrawing.png"
+  },
+  "author": "Nisha & Jose",
+  "permissions": ["storage", "webNavigation", "tabs"]
+}
